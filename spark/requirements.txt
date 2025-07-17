@@ -1,0 +1,7 @@
+pyspark==3.5.1
+venv-pack
+pyyaml
+pyarrow>=11.0
+ua-parser
+user-agents ==2.2.0
+IP2Location==8.10.5
