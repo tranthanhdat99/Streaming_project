@@ -1,5 +1,3 @@
-# config.py
-
 import os
 from configparser import ConfigParser
 
@@ -8,7 +6,7 @@ DEFAULT_CONF_PATH = os.path.join(
     'config', 'kafka', 'settings.conf'
 )
 
-# 1) Load defaults from settings.conf
+# Load defaults from settings.conf
 conf = ConfigParser()
 conf.read(os.getenv('APP_CONF', DEFAULT_CONF_PATH))
 
