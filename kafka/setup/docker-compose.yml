@@ -156,9 +156,3 @@ volumes:
     driver: local
   kafka_data_2:
     driver: local
-
-#kafka.bootstrap.servers=113.160.15.232:9094,113.160.15.232:9194,113.160.15.232:9294
-#kafka.security.protocol=SASL_PLAINTEXT
-#kafka.sasl.mechanism=PLAIN
-#kafka.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="kafka" password="UnigapKafka@2024";
-#topic=product_view
