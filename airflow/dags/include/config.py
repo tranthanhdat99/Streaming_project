@@ -66,7 +66,7 @@ KAFKA_LAG_THRESHOLD = int(Variable.get(
 # === Slack Configuration ===
 SLACK_WEBHOOK_VAR = Variable.get(
     "slack_webhook_url", 
-    default_var="https://hooks.slack.com/services/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"
+    default_var=""
 )
 
 # === Spark Configuration ===
