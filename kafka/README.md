@@ -34,8 +34,15 @@ A Python pipeline that ingests messages from a source Kafka topic to “intermed
    ```bash
    docker network create streaming-network --driver bridge
    ```
-4. **Launch Kafka cluster**:
+3. **Launch Kafka cluster**:
    ```bash
-   cd kafka/setup/kafka
-   docker-compose up -d
+   docker-compose -f setup/kafka/docker-compose.yml up -d
    ```
+4. **Run Producer** (in another shell):
+```bash
+python srcs/mes_producer.py
+```
+5. **Run Consumer**:
+   ```bash
+python srcs/mes_consumer.py
+```
