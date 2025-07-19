@@ -61,4 +61,5 @@ kafka/
 5. **Run Consumer** (in other shells):
    ```bash
    python srcs/mes_consumer.py
-  ```
+   ```
+
