@@ -50,15 +50,15 @@ kafka/
    ```bash
     docker network create streaming-network --driver bridge
    ```
-3. **Launch Kafka cluster**:
+4. **Launch Kafka cluster**:
    ```bash
     docker-compose -f setup/kafka/docker-compose.yml up -d
    ```
-4. **Run Producer** (in other shells):
-  ```bash
+6. **Run Producer** (in other shells):
+   ```bash
    python srcs/mes_producer.py
    ```
 5. **Run Consumer** (in other shells):
-  ```bash
+   ```bash
    python srcs/mes_consumer.py
   ```
