@@ -22,6 +22,7 @@ airflow/dags/__pycache__/
 kafka/data/
 kafka/logs/
 kafka/*.jar
+kafka/img/
 
 # Spark
 spark/__pycache__/
