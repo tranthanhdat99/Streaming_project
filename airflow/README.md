@@ -25,11 +25,29 @@ A set of Airflow DAGs that schedule, run, and alert on Kafka, Spark, and Postgre
 ## 🚀 Quick Start
 Run **all commands from the `airflow/` root folder:**
 1. **Create network & Build docker image**
-1.1 **Create network**
-```bash
-docker network create streaming-network --driver bridge
-```
-1.2 Build custom docker image
-```bash
-docker build -f setup/airflow/Dockerfile -t unigap/airflow:2.10.4 .
-```
+
+  1.1 **Create network**
+  ```bash
+  docker network create streaming-network --driver bridge
+  ```
+  1.2 **Build custom docker image**
+  ```bash
+  docker build -f setup/airflow/Dockerfile -t unigap/airflow:2.10.4 .
+  ```
+2. **Initializing Environment**
+
+   2.1 **Setting the right Airflow user**
+   Get user id information
+   ```bash
+   id -u
+   ```
+   Get group id of group docker:
+   ```bash
+   getent group docker
+   ```
+   Set the information obtained into 2 variables AIRFLOW_UID and DOCKER_GID in the .env file
+
+2.2 Initialize airflow.cfg
+docker compose run airflow-cli bash -c "airflow config list > /opt/airflow/config/airflow.cfg"
+2.3 Initialize the database
+docker compose up airflow-init
