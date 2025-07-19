@@ -1,0 +1,6 @@
+Using this database to collect information about city, region and country from IP address.
+After finishing the download process, put the file into this folder.
+-------------------------------------
+[DB3.LITE]  IP-COUNTRY-REGION-CITY
+Code: DB3LITEBINIPV6
+Download Link: https://lite.ip2location.com/ip2location-lite#database
