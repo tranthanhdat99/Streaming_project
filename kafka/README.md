@@ -23,7 +23,7 @@ A Python pipeline that ingests messages from a source Kafka topic to “intermed
 - Docker & Docker Compose  
 - Python 3.8+ with `confluent_kafka` & `pymongo` libraries  
 - A running MongoDB instance  
-- Network access (SASL credentials) to your source Kafka brokers
+- Network access (SASL credentials) to source Kafka brokers
 
 ---
 
