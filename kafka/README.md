@@ -29,9 +29,13 @@ A Python pipeline that ingests messages from a source Kafka topic to “intermed
 
 ## 🚀 Quick Start
 
-1. **Configure** broker addresses & MongoDB in `config/settings.conf` (see below).  
-2. **Launch Kafka cluster**:
+1. **Configure** broker addresses & MongoDB in `config/settings.conf`.
+2. **Create network**
+   ```bash
+   docker network create streaming-network --driver bridge
+   ```
+4. **Launch Kafka cluster**:
    ```bash
    cd kafka/setup/kafka
    docker-compose up -d
-
+   ```
