@@ -1,58 +1,37 @@
-## Overview
+# Kafka End‑to‑End Monitor
 
-Hướng dẫn này giúp bạn cài đặt một cụm Kafka gồm 3 nodes sử dụng docker có mô hình như sau:
+A Python pipeline that ingests messages from a source Kafka topic to “intermediate” topic of local Kafka cluster, and then writes every message into MongoDB for durable storage.
 
-![](img/kafka-containers.png)
+---
 
-## 1. Create network
+## 📝 Overview
 
-```shell
-docker network create streaming-network --driver bridge
-```
+- **Stage 1:** `mes_producer.py`  
+  • Connects to an external/source Kafka cluster  
+  • Reads from `topics.source`  
+  • Produces each record unchanged into the local `topics.intermediate`
 
-## 2. Run kafka
+- **Stage 2:** `mes_consumer.py`  
+  • Connects to the local Kafka cluster  
+  • Reads from `topics.intermediate`  
+  • Parses JSON payloads and inserts documents into MongoDB
 
-```shell
-docker compose up -d
-```
+---
 
-**Check Status & Logs**
+## ⚙️ Prerequisites
 
-```shell
-docker compose ps
-docker compose logs kafka-0 -f -n 100
-```
+- Docker & Docker Compose  
+- Python 3.8+ with `confluent_kafka` & `pymongo` libraries  
+- A running MongoDB instance  
+- Network access (SASL credentials) to your source Kafka brokers
 
-**Testing**
+---
 
-Run inside kafka's containers
+## 🚀 Quick Start
 
-```shell
-docker exec -ti kafka-0 bash
-```
+1. **Configure** broker addresses & MongoDB in `config/settings.conf` (see below).  
+2. **Launch Kafka cluster**:
+   ```bash
+   cd kafka/setup/kafka
+   docker-compose up -d
 
-Producer
-
-```shell
-kafka-console-producer --producer.config /etc/kafka/producer.properties --bootstrap-server kafka-0:29092,kafka-1:29092,kafka-2:29092 --topic test
-```
-
-Consumer
-
-```shell
-kafka-console-consumer --consumer.config /etc/kafka/consumer.properties --bootstrap-server kafka-0:29092,kafka-1:29092,kafka-2:29092 --topic test --from-beginning
-```
-
-## 3. Monitor
-
-[akqh](http://localhost:8180)
-
-## References
-
-[Quick Start for Confluent Platform](https://docs.confluent.io/platform/current/platform-quickstart.html#quick-start-for-cp)
-
-[Docker Image Reference for Confluent Platform](https://docs.confluent.io/platform/current/installation/docker/image-reference.html#docker-image-reference-for-cp)
-
-[akhq configuration](https://akhq.io/docs/configuration/brokers.html)
-
-[Docker Image Configuration Reference for Confluent Platform](https://docs.confluent.io/platform/current/installation/docker/config-reference.html)
