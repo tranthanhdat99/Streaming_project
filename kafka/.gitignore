@@ -1,0 +1,45 @@
+# General
+*.pyc
+__pycache__/
+*.log
+*.tmp
+.DS_Store
+.env
+*.env
+
+# Virtual environments
+venv/
+env/
+
+# Airflow
+airflow/airflow.db
+airflow/airflow-webserver.pid
+airflow/logs/
+airflow/tmp/
+airflow/dags/__pycache__/
+
+# Kafka
+kafka/data/
+kafka/logs/
+kafka/*.jar
+
+# Spark
+spark/__pycache__/
+spark/checkpoints/
+spark/output/
+spark/tmp/
+
+# Docker
+*.pid
+*.sock
+*.tar
+*.img
+docker-compose.override.yml
+
+# VSCode / JetBrains IDEs
+.vscode/
+.idea/
+
+# OS generated
+Thumbs.db
+ehthumbs.db
