@@ -64,25 +64,25 @@ Run **all commands from the `airflow/` root folder:**
     ```bash
     docker compose -f setup/airflow/docker-compose.yml up -d
     ```
-This command will start the following docker containers:
+  This command will start the following docker containers:
 
-`airflow-scheduler` - The scheduler monitors all tasks and dags, then triggers the task instances once their dependencies are complete.
+  `airflow-scheduler` - The scheduler monitors all tasks and dags, then triggers the task instances once their dependencies are complete.
 
-`airflow-dag-processor` - The DAG processor parses DAG files.
+  `airflow-dag-processor` - The DAG processor parses DAG files.
 
-`airflow-api-server` - The api server is available at http://localhost:18080.
+  `airflow-api-server` - The api server is available at http://localhost:18080.
 
-`airflow-worker` - The worker that executes the tasks given by the scheduler.
+  `airflow-worker` - The worker that executes the tasks given by the scheduler.
 
-`airflow-triggerer` - The triggerer runs an event loop for deferrable tasks.
+  `airflow-triggerer` - The triggerer runs an event loop for deferrable tasks.
 
-`airflow-init` - The initialization service.
+  `airflow-init` - The initialization service.
 
-`postgres` - The database.
+  `postgres` - The database.
 
-`redis` - The redis - broker that forwards messages from scheduler to worker.
+  `redis` - The redis - broker that forwards messages from scheduler to worker.
 
 4. **Accessing the web interface**
-  - **Webserver**: http://localhost:18080
+    - **Webserver**: http://localhost:18080
 
-  - **Flower** (optional): http://localhost:5555  
+    - **Flower** (optional): http://localhost:5555  
