@@ -47,10 +47,12 @@ Run **all commands from the `airflow/` root folder:**
    getent group docker
    ```
    **Set the information obtained into 2 variables `AIRFLOW_UID` and `DOCKER_GID` in the `.env` file.**
+
    2.2 **Initialize airflow.cfg**
 
    ```bash
-   docker compose -f setup/airflow/docker-compose.yml run airflow-cli bash -c "airflow config list > /opt/airflow/config/airflow.cfg"
+   docker compose -f setup/airflow/docker-compose.yml run airflow-cli bash -c
+   "airflow config list > /opt/airflow/config/airflow.cfg"
    ```
    2.3 **Initialize the database**
 
