@@ -16,7 +16,9 @@ airflow/airflow.db
 airflow/airflow-webserver.pid
 airflow/logs/
 airflow/tmp/
+airflow/plugins
 airflow/dags/__pycache__/
+airflow/dags/include/__pycache__/
 
 # Kafka
 kafka/data/
@@ -30,6 +32,7 @@ spark/__pycache__/
 spark/checkpoints/
 spark/output/
 spark/tmp/
+spark/code.zip
 
 # Docker
 *.pid
