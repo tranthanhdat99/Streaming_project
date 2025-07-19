@@ -44,7 +44,7 @@ kafka/
 ```
 
 ## 🚀 Quick Start
-Run all commands from the kafka/ root folder:
+Run **all commands from the `kafka/` root folder**:
 
 1. **Configure** broker addresses & MongoDB in `config/settings.conf`.
 2. **Create network**
