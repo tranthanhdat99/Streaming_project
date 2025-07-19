@@ -48,11 +48,11 @@ kafka/
 1. **Configure** broker addresses & MongoDB in `config/settings.conf`.
 2. **Create network**
    ```bash
-    docker network create streaming-network --driver bridge
+   docker network create streaming-network --driver bridge
    ```
 4. **Launch Kafka cluster**:
    ```bash
-    docker-compose -f setup/kafka/docker-compose.yml up -d
+   docker-compose -f setup/kafka/docker-compose.yml up -d
    ```
 6. **Run Producer** (in other shells):
    ```bash
