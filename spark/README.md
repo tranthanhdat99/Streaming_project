@@ -28,6 +28,32 @@ A real‑time data processing pipeline: Spark Structured Streaming reads custome
 
 ---
 
+## 📁 Project Structure
+
+```bash
+spark/
+├── config/
+│   └── settings.conf        # Spark, Kafka & Postgres parameters
+│   └── log4j/properties     # Log4j config
+├── setup/spark/
+│   ├── Dockerfile
+│   └── docker-compose.yml
+├── ip2location/             # IP2LOCATION‑LITE‑DB3.IPV6.BIN
+├── requirements.txt
+├── srcs/
+│   └── kafka_streaming.py   # Entry point for Structured Streaming job
+├── udf/                     # UDF modules (e.g. IP→country)
+├── tables/                  # Table‑specific transform functions
+└── utils/
+    ├── config.py            # Loads `config/settings.conf`
+    ├── logger.py            # Log4j wrapper
+    ├── pg_writer.py         # JDBC upsert utility
+    ├── schema.py            # Defines message schema
+    └── table_conflict.py    # ON CONFLICT clauses for upserts
+```
+
+---
+
 ## 🚀 Quick Start
 
 Run **all commands from the `spark/` root folder**:
