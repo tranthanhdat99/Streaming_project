@@ -63,6 +63,7 @@ Run **all commands from the `spark/` root folder**:
    docker network create streaming-network --driver bridge
    ```
 2. **Run Spark**
+
    2.1. **Build Spark image**  
    ```bash
    docker build -f setup/spark/Dockerfile -t unigap/spark:3.5 .
@@ -77,6 +78,7 @@ Run **all commands from the `spark/` root folder**:
    docker compose -f setup/spark/docker-compose.yml up -d
    ```
 3. **Create folder and copy IP2Location file into Spark docker**
+
    3.1. **Create folder**  
    ```bash
    docker exec -ti spark-spark-1 mkdir -p /data/location
