@@ -27,6 +27,22 @@ A Python pipeline that ingests messages from a source Kafka topic to “intermed
 
 ---
 
+## 📁 Project Structure
+```bash
+kafka/
+├── setup/kafka/  
+│   └── docker-compose.yml    # Kafka brokers & AKHQ UI  
+├── config/  
+│   ├── settings.conf         # broker URLs, topics, MongoDB, logging  
+│   └── kafka_server_jaas.conf  
+├── srcs/  
+│   ├── mes_producer.py       # Stage 1: Kafka → intermediate topic  
+│   └── mes_consumer.py       # Stage 2: intermediate → MongoDB  
+└── utils/  
+    ├── config.py             # loads settings.conf & env overrides  
+    └── logging_utils.py      # rotating‑file logger setup
+```
+
 ## 🚀 Quick Start
 
 1. **Configure** broker addresses & MongoDB in `config/settings.conf`.
