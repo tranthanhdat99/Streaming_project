@@ -43,6 +43,6 @@ A Python pipeline that ingests messages from a source Kafka topic to “intermed
 python srcs/mes_producer.py
 ```
 5. **Run Consumer**:
-   ```bash
+```bash
 python srcs/mes_consumer.py
 ```
