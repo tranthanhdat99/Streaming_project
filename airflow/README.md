@@ -67,7 +67,6 @@ Run **all commands from the `airflow/` root folder:**
 This command will start the following docker containers:
 
 `airflow-scheduler` - The scheduler monitors all tasks and dags, then triggers the task instances once their dependencies are complete.
-
 `airflow-dag-processor` - The DAG processor parses DAG files.
 
 `airflow-api-server` - The api server is available at http://localhost:18080.
