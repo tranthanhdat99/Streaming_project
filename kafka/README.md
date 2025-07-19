@@ -1,4 +1,4 @@
-# Kafka End‑to‑End Monitor
+# Kafka End‑to‑End Pipeline
 
 A Python pipeline that ingests messages from a source Kafka topic to “intermediate” topic of local Kafka cluster, and then writes every message into MongoDB for durable storage.
 
