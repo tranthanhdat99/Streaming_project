@@ -58,6 +58,19 @@ spark/
 
 Run **all commands from the `spark/` root folder**:
 
+1. **Create network**
+   ```bash
+   docker network create streaming-network --driver bridge
+   ```
+2. **Run Spark**
+   2.1. **Build Spark image**  
+   ```bash
+   docker build -f setup/spark/Dockerfile -t unigap/spark:3.5 .
+   2.2. **Build Spark image**
+   ```bash
+   docker volume create spark_data
+   docker volume create spark_lib
+   ```
 1. **Build Spark image**  
    ```bash
    docker build -f setup/spark/Dockerfile -t unigap/spark:3.5 .
