@@ -54,11 +54,11 @@ kafka/
    ```bash
    docker-compose -f setup/kafka/docker-compose.yml up -d
    ```
-4. **Run Producer** (in another shell):
-```bash
-python srcs/mes_producer.py
-```
-5. **Run Consumer**:
-```bash
-python srcs/mes_consumer.py
-```
+4. **Run Producer** (in other shells):
+  ```bash
+  python srcs/mes_producer.py
+  ```
+5. **Run Consumer** (in other shells):
+  ```bash
+  python srcs/mes_consumer.py
+  ```
