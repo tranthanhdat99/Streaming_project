@@ -92,6 +92,9 @@ This project demonstrates a full streaming data pipeline that captures customer 
    - Kafka and Spark UIs for cluster health and streaming metrics
    - Airflow UI for DAG status
    - Slack for real‑time alerts
+  
+---
+
 ## 📂 Repository Layout
 ```bash
 ├── kafka/      Kafka cluster setup, Python producer & consumer, MongoDB archiving  
