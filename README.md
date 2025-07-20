@@ -51,6 +51,7 @@ This project demonstrates a full streaming data pipeline that captures customer 
                                                [ Airflow Monitoring DAGs ]
                                                         ↓
                                                   Slack Notifications
+```
 
 - **Kafka**  
   Handles event ingestion and decoupling from the source website.
