@@ -72,4 +72,18 @@ This project demonstrates a full streaming data pipeline that captures customer 
 1. **Clone this repository**  
    ```bash
    git clone https://github.com/your-user/your-repo.git
-   cd your-repo
+   cd your-repo 
+2. **Follow each subfolder’s README** for setup and run instructions:  
+   - `kafka/` – streaming and Mongo archiving  
+   - `spark/` – lightweight transformations and Postgres upserts  
+   - `airflow/` – simple DAGs and alerts  
+3. **Install prerequisites**:
+
+     - Docker & Docker Compose
+     - Python 3.8+ (with `confluent_kafka`, `pymongo`)
+     - Java 17 (for Spark)
+     - Running instances of MongoDB and PostgreSQL
+4. **Configure** connection strings, credentials, and thresholds in each `config/` folder or via environment variables.
+5. **Launch services**
+
+    Start components in sequence:
