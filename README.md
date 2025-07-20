@@ -51,3 +51,24 @@ This project demonstrates a full streaming data pipeline that captures customer 
                                                [ Airflow Monitoring DAGs ]
                                                         ↓
                                                   Slack Notifications
+
+- **Kafka**  
+  Handles event ingestion and decoupling from the source website.
+
+- **MongoDB**  
+  Acts as a raw event archive for all ingested messages.
+
+- **Spark**  
+  Processes streaming data into analytical tables with UDF enrichments and upserts.
+
+- **Airflow**  
+  Orchestrates and monitors each pipeline stage, sending Slack alerts on failures.
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone this repository**  
+   ```bash
+   git clone https://github.com/your-user/your-repo.git
+   cd your-repo
