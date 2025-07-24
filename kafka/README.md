@@ -4,7 +4,7 @@ A Python pipeline that ingests messages from a source Kafka topic to “intermed
 
 ---
 
-## 📝 Overview
+## Overview
 
 - **Stage 1:** `mes_producer.py`  
   • Connects to an external/source Kafka cluster  
@@ -18,7 +18,7 @@ A Python pipeline that ingests messages from a source Kafka topic to “intermed
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 - Docker & Docker Compose  
 - Python 3.8+ with `confluent_kafka` & `pymongo` libraries  
@@ -27,7 +27,7 @@ A Python pipeline that ingests messages from a source Kafka topic to “intermed
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ```bash
 kafka/
 ├── setup/kafka/  
@@ -43,7 +43,7 @@ kafka/
     └── logging_utils.py      # rotating‑file logger setup
 ```
 
-## 🚀 Quick Start
+## Quick Start
 Run **all commands from the `kafka/` root folder**:
 
 1. **Configure** broker addresses & MongoDB in `config/settings.conf`.
