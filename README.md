@@ -5,7 +5,7 @@ This project demonstrates a full streaming data pipeline that captures customer 
 
 ---
 
-## ✨ Core Capabilities
+## Core Capabilities
 
 - **Event Streaming**  
   Capture every product view, add‑to‑cart, and filter action from the Glamira site in real time.
@@ -21,7 +21,7 @@ This project demonstrates a full streaming data pipeline that captures customer 
 
 ---
 
-## 📊 Key Use Cases
+## Key Use Cases
 
 1. **Live Product Popularity**  
    Maintain up‑to‑date top‑N lists of most viewed rings, necklaces, and other accessories.
@@ -37,7 +37,7 @@ This project demonstrates a full streaming data pipeline that captures customer 
 
 ---
 
-## ⚙️ Architecture
+## Architecture
 
 ```text
 [ Website Events ] 
@@ -67,7 +67,7 @@ This project demonstrates a full streaming data pipeline that captures customer 
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 1. **Clone this repository**  
    ```bash
@@ -95,7 +95,7 @@ This project demonstrates a full streaming data pipeline that captures customer 
   
 ---
 
-## 📂 Repository Layout
+## Repository Layout
 ```bash
 ├── kafka/      Kafka cluster setup, Python producer & consumer, MongoDB archiving  
 ├── spark/      Spark job, UDFs, schema, PostgreSQL upserts  
