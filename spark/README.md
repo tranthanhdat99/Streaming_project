@@ -4,7 +4,7 @@ A real‑time data processing pipeline: Spark Structured Streaming reads custome
 
 ---
 
-## 📝 Overview
+## Overview
 
 1. **Ingest**  
    Spark reads messages from a Kafka “intermediate” topic.
@@ -19,7 +19,7 @@ A real‑time data processing pipeline: Spark Structured Streaming reads custome
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 - Docker & Docker Compose  (or Spark standalone)  
 - Java 17 (JRE)  
@@ -28,7 +28,7 @@ A real‑time data processing pipeline: Spark Structured Streaming reads custome
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 spark/
@@ -54,7 +54,7 @@ spark/
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 Run **all commands from the `spark/` root folder**:
 
