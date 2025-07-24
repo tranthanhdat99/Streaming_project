@@ -4,7 +4,7 @@ A set of Airflow DAGs that schedule, run, and alert on Kafka, Spark, and Postgre
 
 ---
 
-## 📝 Overview
+## Overview
 
 - **Kafka DAG**: Monitors broker TCP health, topic availability, message throughput, and consumer lag.  
 - **Spark DAG**: Checks Spark master and worker availability and resource usage.  
@@ -13,7 +13,7 @@ A set of Airflow DAGs that schedule, run, and alert on Kafka, Spark, and Postgre
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 - Docker & Docker Compose  
 - A `.env` file at project root
@@ -22,7 +22,7 @@ A set of Airflow DAGs that schedule, run, and alert on Kafka, Spark, and Postgre
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 Run **all commands from the `airflow/` root folder:**
 1. **Create network & Build docker image**
   
